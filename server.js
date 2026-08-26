@@ -14,6 +14,10 @@ global.remoteURL
 
 global.IO = io
 
+const path = require('path');
+app.set('views', path.join(__dirname, 'views'));
+
+
 app.set("view engine", "html")
 app.engine("html", tarkine.renderFile)
 app.use(cookieParser())
